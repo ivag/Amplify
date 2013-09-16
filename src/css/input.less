@@ -1,0 +1,33 @@
+/**
+ * Amp input styles
+**/
+@import "core.less";
+
+input.amp, textarea.amp {
+          box-sizing:   border-box;
+     -moz-box-sizing:   border-box;
+  -webkit-box-sizing:   border-box;
+
+  display:        inline-block;
+  padding:        4px;
+  margin:         0;
+  border:         solid 1px #ccc;
+  background:     #fff;
+  color:          #333;
+  outline-offset: 0px;
+  
+  &[disabled] {
+    cursor:       default;
+    background:   #eee;
+    color:        #aaa;
+    border-color: #eee;
+  }
+  
+  &.number { 
+    text-align: right; 
+  }
+  
+  &.date {
+    text-align: center;
+  }
+}

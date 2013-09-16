@@ -1,0 +1,357 @@
+[
+    {
+        "label": "Academy - Academy", 
+        "name": "ProCredit Academy GmbH", 
+        "value": "Academy"
+    }, 
+    {
+        "label": "BIO - BIO", 
+        "name": "Belgische Investeringsmaatschappu Voor Ontwikkelingslanden NV", 
+        "value": "BIO"
+    }, 
+    {
+        "label": "Bank im Bistum Essen eG - BBE eG", 
+        "name": "Bank im Bistum Essen eG", 
+        "value": "BBE eG"
+    }, 
+    {
+        "label": "Bulgaria Lease - Bulgaria Lease", 
+        "name": "ProLease EAD (Bulgaria Lease)", 
+        "value": "Bulgaria Lease"
+    }, 
+    {
+        "label": "Bulgaria SPV - Bulg-SPV", 
+        "name": "ProCredit Company B.V. (Bulgaria SPV)", 
+        "value": "Bulg-SPV"
+    }, 
+    {
+        "label": "Calvert Foundation - Calvert Foundation", 
+        "name": "Calvert Social Investment Foundation, Inc.", 
+        "value": "Calvert Foundation"
+    }, 
+    {
+        "label": "Citibank Frankfurt - Citigroup Frankfurt", 
+        "name": "Citigroup Global Markets Deutschland AG & Co. KGaA", 
+        "value": "Citigroup Frankfurt"
+    }, 
+    {
+        "label": "Citibank London - CITI UK", 
+        "name": "Citibank N.A. London", 
+        "value": "CITI UK"
+    }, 
+    {
+        "label": "Citibank New York - CITI NY", 
+        "name": "Citibank New York", 
+        "value": "CITI NY"
+    }, 
+    {
+        "label": "Commerzbank Frankfurt - COBA FFM", 
+        "name": "Commerzbank AG Frankfurt", 
+        "value": "COBA FFM"
+    }, 
+    {
+        "label": "CreditSuisse Microfin.Fund Manag.Company - CreditSuisse MFMC", 
+        "name": "Credit Suisse Microfinance Fund Management Company", 
+        "value": "CreditSuisse MFMC"
+    }, 
+    {
+        "label": "DGL - DGL", 
+        "name": "Deutsche Global Liquidity Series PLC", 
+        "value": "DGL"
+    }, 
+    {
+        "label": "DHB-Niederlande - DHB", 
+        "name": "Demir-Halk Bank (Nederland)NV", 
+        "value": "DHB"
+    }, 
+    {
+        "label": "DWM Asset Management, LLC - DWM", 
+        "name": "DWM Asset Management, LLC", 
+        "value": "DWM"
+    }, 
+    {
+        "label": "DZ Bank - DZ Bank", 
+        "name": "DZ Bank AG", 
+        "value": "DZ Bank"
+    }, 
+    {
+        "label": "Deutsche Bank Frankfurt - DEUBA FFM", 
+        "name": "Deutsche Bank AG Frankfurt", 
+        "value": "DEUBA FFM"
+    }, 
+    {
+        "label": "Dexia Micro-Credit Fund - Dexia", 
+        "name": "Dexia Micro-Credit Fund", 
+        "value": "Dexia"
+    }, 
+    {
+        "label": "ECI (Calvert) - ECI (Calvert)", 
+        "name": "Everence Community Investments Inc.", 
+        "value": "ECI (Calvert)"
+    }, 
+    {
+        "label": "European Fund for Southeast Europe - EFSE", 
+        "name": "European Fund for Southeast Europe", 
+        "value": "EFSE"
+    }, 
+    {
+        "label": "European Investment Bank - EIB", 
+        "name": "European Ivestment Bank", 
+        "value": "EIB"
+    }, 
+    {
+        "label": "FMO - FMO", 
+        "name": "Netherlands Development Finance Comany", 
+        "value": "FMO"
+    }, 
+    {
+        "label": "Frankfurter Sparkasse von 1822 - Fraspa", 
+        "name": "Frankfurter Sparkasse von 1822", 
+        "value": "Fraspa"
+    }, 
+    {
+        "label": "Gates Foundation - GATESFOUND", 
+        "name": "Bill & Melinda Gates foundation", 
+        "value": "GATESFOUND"
+    }, 
+    {
+        "label": "HSBC D\u00fcsseldorf - HSBC DD", 
+        "name": "HSBC Trinkaus & Burkhardt AG", 
+        "value": "HSBC DD"
+    }, 
+    {
+        "label": "IFC International Finance Corporation - IFC", 
+        "name": "IFC International Finance Corporation", 
+        "value": "IFC"
+    }, 
+    {
+        "label": "Impulse Microfinance - Impulse Microfinance", 
+        "name": "Impulse Microfinance Investment Fund", 
+        "value": "Impulse Microfinance"
+    }, 
+    {
+        "label": "International American Development Bank - IADB", 
+        "name": "International American Development Bank", 
+        "value": "IADB"
+    }, 
+    {
+        "label": "KfW - KfW", 
+        "name": "KfW", 
+        "value": "KfW"
+    }, 
+    {
+        "label": "LBBW - LBBW", 
+        "name": "Landesbank Baden-W\u00fcrttemberg", 
+        "value": "LBBW"
+    }, 
+    {
+        "label": "Minlam - Minlam", 
+        "name": "MINLAM MICROFINANCE OFFSHORE MASTER FUND, LP", 
+        "value": "Minlam"
+    }, 
+    {
+        "label": "Monarch (Calvert) - MCF (Calv)", 
+        "name": "Monarch Community Fund", 
+        "value": "MCF (Calv)"
+    }, 
+    {
+        "label": "Overseas Private Investment Corporation - OPIC", 
+        "name": "Overseas Private Investment Corporation", 
+        "value": "OPIC"
+    }, 
+    {
+        "label": "PCF Moldova - PCF-MD", 
+        "name": "ProCredit S.A. Moldova", 
+        "value": "PCF-MD"
+    }, 
+    {
+        "label": "Pax-Bank - Pax", 
+        "name": "Pax-Bank eG", 
+        "value": "Pax"
+    }, 
+    {
+        "label": "ProCredit AG Bank in Gr\u00fcndung Germany - PCB-DE", 
+        "name": "ProCredit AG Bank in Gr\u00fcndung Germany", 
+        "value": "PCB-DE"
+    }, 
+    {
+        "label": "ProCredit Bank Albania - PCB-AL", 
+        "name": "ProCredit Bank SH.A. Albania", 
+        "value": "PCB-AL"
+    }, 
+    {
+        "label": "ProCredit Bank Armenia - PCB-AM", 
+        "name": "CJSC ProCredit Bank Armenia", 
+        "value": "PCB-AM"
+    }, 
+    {
+        "label": "ProCredit Bank Bolivia - PCB-BO", 
+        "name": "Banco Los Andes ProCredit S.A. Bolivia", 
+        "value": "PCB-BO"
+    }, 
+    {
+        "label": "ProCredit Bank Bosnia - PCB-BA", 
+        "name": "ProCredit Bank D.D. Bosnia", 
+        "value": "PCB-BA"
+    }, 
+    {
+        "label": "ProCredit Bank Bulgaria - PCB-BG", 
+        "name": "ProCredit Bank (Bulgaria) A.D.", 
+        "value": "PCB-BG"
+    }, 
+    {
+        "label": "ProCredit Bank Colombia - PCB-CO", 
+        "name": "ProCredit Bank Colombia", 
+        "value": "PCB-CO"
+    }, 
+    {
+        "label": "ProCredit Bank Congo - PCB-CD", 
+        "name": "ProCredit Bank Congo SARL", 
+        "value": "PCB-CD"
+    }, 
+    {
+        "label": "ProCredit Bank Ecuador - PCB-EC", 
+        "name": "Banco ProCredit S.A. Ecuador", 
+        "value": "PCB-EC"
+    }, 
+    {
+        "label": "ProCredit Bank Georgia - PCB-GE", 
+        "name": "ProCredit Bank Georgia", 
+        "value": "PCB-GE"
+    }, 
+    {
+        "label": "ProCredit Bank Honduras - PCB-HN", 
+        "name": "Banco ProCredit S.A. Honduras", 
+        "value": "PCB-HN"
+    }, 
+    {
+        "label": "ProCredit Bank Kosovo - PCB-XK", 
+        "name": "ProCredit Bank SH.A. Kosovo", 
+        "value": "PCB-XK"
+    }, 
+    {
+        "label": "ProCredit Bank Macedonia - PCB-MK", 
+        "name": "ProCredit Bank A.D. Macedonia", 
+        "value": "PCB-MK"
+    }, 
+    {
+        "label": "ProCredit Bank Mexico - PCB-MX", 
+        "name": "Pro Confianza S.A. DE SV Mexico", 
+        "value": "PCB-MX"
+    }, 
+    {
+        "label": "ProCredit Bank Moldova - PCB-MD", 
+        "name": "Commercial Bank ProCredit Bank S.A. Moldova", 
+        "value": "PCB-MD"
+    }, 
+    {
+        "label": "ProCredit Bank Mozambique - PCB-MZ", 
+        "name": "Banco ProCredit S.A. Mozambique", 
+        "value": "PCB-MZ"
+    }, 
+    {
+        "label": "ProCredit Bank Nicaragua - PCB-NI", 
+        "name": "Banco ProCredit S.A. Nicaragua", 
+        "value": "PCB-NI"
+    }, 
+    {
+        "label": "ProCredit Bank Romania - PCB-RO", 
+        "name": "ProCredit Bank S.A. Romania", 
+        "value": "PCB-RO"
+    }, 
+    {
+        "label": "ProCredit Bank Serbia - PCB-XS", 
+        "name": "ProCredit Bank AD Serbia", 
+        "value": "PCB-XS"
+    }, 
+    {
+        "label": "ProCredit Bank Sierra Leone - PCB-SL", 
+        "name": "ProCredit Bank Sierra Leone Limited", 
+        "value": "PCB-SL"
+    }, 
+    {
+        "label": "ProCredit Bank Ukraine - PCB-UA", 
+        "name": "CJSC ProCredit Bank Ukraine", 
+        "value": "PCB-UA"
+    }, 
+    {
+        "label": "ProCredit Capital Funding LLC - LLC", 
+        "name": "ProCredit Capital Funding LLC on behalf of the Trust", 
+        "value": "LLC"
+    }, 
+    {
+        "label": "ProCredit Capital Funding Trust - Trust", 
+        "name": "ProCredit Capital Funding Trust", 
+        "value": "Trust"
+    }, 
+    {
+        "label": "ProCredit El Salvador - PCB-SV", 
+        "name": "Banco ProCredit S.A. El Salvador", 
+        "value": "PCB-SV"
+    }, 
+    {
+        "label": "ProCredit Ghana - PCF-GH", 
+        "name": "ProCredit SLC Limited Ghana", 
+        "value": "PCF-GH"
+    }, 
+    {
+        "label": "ProCredit Services Ltda. Colombia - PCF-CO", 
+        "name": "ProCredit Services Ltda. Colombia", 
+        "value": "PCF-CO"
+    }, 
+    {
+        "label": "Proparco - Proparco", 
+        "name": "Societe de Promotion et de Participation pour la Cooperation Economique", 
+        "value": "Proparco"
+    }, 
+    {
+        "label": "SNS Inst Micro Fund II - SNS Fund NL", 
+        "name": "SNS Institutional Microfinance Fund II", 
+        "value": "SNS Fund NL"
+    }, 
+    {
+        "label": "Serbia SPV - SERBIA SPV", 
+        "name": "PC Finance II B.V. Serbia SPV", 
+        "value": "SERBIA SPV"
+    }, 
+    {
+        "label": "TCX - TCX", 
+        "name": "The Currency Exchange Fund N.V.", 
+        "value": "TCX"
+    }, 
+    {
+        "label": "VDK Spaarbank - VDK Sparrbank", 
+        "name": "VDK Spaarbank", 
+        "value": "VDK Sparrbank"
+    }, 
+    {
+        "label": "WGZ - WGZ", 
+        "name": "WGZ Bank AG", 
+        "value": "WGZ"
+    }, 
+    {
+        "label": "responsAbility SICAV (Lux) FIF - Resp(SICAV)_FIF", 
+        "name": "responsAbility SICAV (Lux) Financial Inclusion Fund", 
+        "value": "Resp(SICAV)_FIF"
+    }, 
+    {
+        "label": "responsAbility SICAV (Lux) MF - Resp(SICAV)_MF", 
+        "name": "responsAbility SICAV (Lux) Mikrofinanz-Fonds", 
+        "value": "Resp(SICAV)_MF"
+    }, 
+    {
+        "label": "responsabilitySICAV - responsability", 
+        "name": "responsability SICAV (Lux)", 
+        "value": "responsability"
+    }, 
+    {
+        "label": "vr bank - vr bank", 
+        "name": "vr bank Untertaunus eG", 
+        "value": "vr bank"
+    }, 
+    {
+        "label": "\u00d6sterr.Entwicklungsbank - Entwicklungsbank", 
+        "name": "\u00d6sterreichische Entwicklungsbank AG", 
+        "value": "Entwicklungsbank"
+    }
+]

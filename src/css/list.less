@@ -1,0 +1,75 @@
+.amp.btn.select { 
+  padding: 4px;
+  background-image: url(../img/arrow-up-down.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+    
+  // This looks the same as the "active" class on the buttons
+  // except that it's contorlled by the Select widget instad of the button itself
+  &.open {
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+  }
+  
+  div {
+    margin:           0 22px 0 2px;
+    overflow:         hidden;
+    text-overflow:    ellipsis;
+    white-space:      nowrap;
+    text-align:       left;
+    background-color: transparent;
+  }
+}
+
+
+.amp.input.combo {
+  background-image:     url('../img/arrow-up-down.png');
+  background-position:  right center;
+  background-repeat:    no-repeat;    
+  padding-right:        20px;
+
+  &.loading {
+    background-image:   url('../img/ajax-load.gif');
+  }
+}
+
+
+.amp.panel-list {
+  list-style: none;
+  padding:    0;
+  margin:     0;
+  
+  li {
+    padding:       4px 20px;
+    margin:        0;
+    border-bottom: solid 1px #eee;
+    white-space:   nowrap;
+    line-height:   1;
+    cursor:        pointer;
+
+    background-position:  2px center;
+    background-repeat:    no-repeat;
+    
+    overflow:      hidden;
+    text-overflow: ellipsis;
+    
+    &.focused {
+      background-color: #0064cd;
+      color:            #fff;
+
+      &.active {
+        background-color: #0064cd;
+        background-image: url('../img/tick-light.png');
+      }
+    }
+
+    &.active {
+      background-color: #fff;
+      background-image: url('../img/tick-dark.png');
+    }
+  }
+  
+  li:last-child {
+    border-bottom: none;
+  }  
+}

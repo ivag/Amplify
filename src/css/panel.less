@@ -1,0 +1,82 @@
+.amp-panel {
+  position: relative;
+}
+
+// Some panels are used as components of composite controls
+.amp-panel.component {
+  z-index:            5;
+  position:           absolute;
+  visibility:         hidden;
+  background:         white;
+  -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+     -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+       -o-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+          box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+
+  .amp-content {
+     display:  inline-block; /* Required so that the content div expands when to its content's dimensions */
+  }
+  
+  &.shown {
+    visibility: visible;
+
+    .amp-content {
+      display: block;        /* Once the panel is shown, we can switch the content to display block as the dimensions have been calculated */
+    }
+  }
+}
+
+.amp-wrapper {
+  position: absolute;
+  overflow: hidden;
+  top:      0;
+  left:     0;
+  bottom:   0;
+  right:    0;
+}
+
+.amp-content {
+                          /* DO NOT add height or width */
+  overflow: auto;         /* Required so that the content div stretches around childen's margins */
+  position: relative;     /* Required so we can use the css top property instead of scrollTop for performance */
+}
+
+.amp-scrollbar-v {
+  position: absolute;
+  z-index:  3;
+  width:    10px;
+  top:      0;
+  bottom:   0;
+  right:    0;
+  
+  opacity:    0;
+  
+  transition: opacity 0.2s linear;
+  background: #f5f5f5;
+  cursor:     pointer;
+}
+
+.amp-panel:hover .amp-scrollbar-v, .amp-panel.scrolling .amp-scrollbar-v {
+  opacity: 0.95;
+}
+
+.amp-thumb-v {
+  position:   absolute;
+  width:      10px;
+
+  background: #ddd;
+  cursor:     pointer;
+}
+
+.amp-scrollbar-h {
+  width: 0;
+  height: 0;
+}
+
+.amp-unselectable {
+  user-select:          none;
+  -moz-user-select:     none;
+  -khtml-user-select:   none;
+  -webkit-user-select:  none;
+}
+

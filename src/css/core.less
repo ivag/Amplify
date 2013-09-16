@@ -1,0 +1,59 @@
+/**
+ * Amp core styles
+**/
+
+// Helper classes
+.clearfix() { 
+  *zoom: 1; 
+
+  &:before, &:after { 
+    display: table; 
+    content: ""; 
+  }
+
+  &:after { 
+    clear: both; 
+  }
+}
+
+.box-shadow(@shadow){
+  -webkit-box-shadow: @shadow;
+     -moz-box-shadow: @shadow;
+          box-shadow: @shadow;
+}
+
+.opacity(@opacity: 100) { 
+  opacity: @opacity / 100; 
+  filter: e(%("alpha(opacity=%d)", @opacity));
+}
+
+.amp {
+  font-size: inherit;
+
+  &:focus {
+    outline:      solid 1px #B3D4FD;
+    border-color: #B3D4FD;
+  }
+  
+  &::-moz-focus-inner {
+    border: 0;
+  }
+}
+
+// Multi-purpose backdrop.
+// Used by modal windows and alerts.
+div.amp-backdrop {
+  position: fixed;
+  z-index:  1;
+  display:  none;
+  opacity:  .75;
+  top:      0;
+  left:     0;
+  right:    0;
+  bottom:   0;
+  background: #fff;
+  background: -webkit-gradient(radial, center center, 0, center center, 460, from(#fff), to(#ccc));
+  background: -webkit-radial-gradient(circle, #fff, #ccc);
+  background: -moz-radial-gradient(circle, #fff, #ccc);
+  background: -ms-radial-gradient(circle, #fff, #ccc);
+}

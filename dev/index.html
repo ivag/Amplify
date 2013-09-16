@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Amplify!</title>
+  <style type="text/css" media="screen">
+    body {
+      font-family: "Helvetica Neue", Arial;
+      font-size:   13px;
+      color:       #444;
+    }
+
+    #container {
+      width: 960px;
+      min-height: 400px;
+      margin: 20px auto;
+      padding: 0 10px 10px;
+      border: solid 1px #ddd;
+      position: relative;
+    }
+    
+    #main {
+      width: 400px;
+      float: left;
+    }
+    
+    #sidebar {
+      width: 400px;
+      float: right;
+      border-left: solid 1px #ddd;
+      padding: 0 10px 10px;
+    }
+
+    .row {
+      margin: 10px 0;
+      line-height: 20px;
+    }
+
+    .row label.inline {
+      display: inline-block;
+      width: 100px;
+    }
+  </style>
+  
+  <!-- Button.less imports core.less -->
+  <link rel="stylesheet/less" href="/static/src/css/button.less" type="text/css" media="screen" charset="utf-8">
+  <link rel="stylesheet/less" href="/static/src/css/input.less" type="text/css" media="screen" charset="utf-8">
+  <link rel="stylesheet/less" href="/static/src/css/list.less" type="text/css" media="screen" charset="utf-8">
+  <link rel="stylesheet/less" href="/static/src/css/panel.less" type="text/css" media="screen" charset="utf-8">
+  <link rel="stylesheet/less" href="/static/src/css/datepicker.less" type="text/css" media="screen" charset="utf-8">
+  <link rel="stylesheet/less" href="/static/src/css/grid.less" type="text/css" media="screen" charset="utf-8">
+  <script src="/static/libs/less-1.4.1.min.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div id="main">
+      <h2>1. Core Module</h2>
+
+      <div class="row">
+        <label><input type="radio" name="word" id="radio-native-1"> Hello</label>
+        <label><input type="radio" name="word" id="radio-native-2"> World</label>
+      </div> 
+
+      <div class="row">
+        <label><input type="checkbox" id="checkbox-native-1"> Cheese</label>
+        <label><input type="checkbox" id="checkbox-native-2"> Macaroni</label>
+      </div>
+    
+      <h2>1. Buttons</h2>
+    
+      <div class="row">
+        <label>Normal Buttons</label> 
+        <input type="button" id="unstyled-button" value="Click Me!">
+        <button id="styled-button">Click Me!</button>
+      </div>
+
+      <div class="row">
+        <label>Checkboxes</label> 
+        <button id="checkbox-1">Money</button>
+        <button id="checkbox-2">Power</button>
+        <button id="checkbox-3">Strong Beliefs</button>
+      </div>
+    
+      <div class="row">
+        <label>Radios</label> 
+        <button id="radio-1" name="radio-foods">Pizza</button>
+        <button id="radio-2" name="radio-foods">Burger</button>
+        <button id="radio-3" name="radio-foods">Hot Dog</button>
+      </div>
+    
+      <h2>2. Inputs</h2>
+    
+      <div class="row">
+        <input type="text" id="input-text" placeholder="Text" value="Something" style="width: 130px">
+        <input type="text" id="input-number" placeholder="Number" style="width: 130px">
+        <input type="text" id="input-date" style="width: 130px">
+      </div>
+      
+      <h2>3. Datepicker</h2>
+      <div class="row" id="datepicker-row">
+        <input type="text" id="input-datepicker" style="width: 130px">
+        <br><br>
+      </div>
+      
+    </div>
+    
+    <div id="sidebar">
+      <h2>3. Lists</h2>
+      
+      <div class="row">
+        <h3>Normal list</h3> 
+        <div id="list-1" style="height:150px"></div>
+      </div>
+      
+      <div class="row">
+        <h3>Dropdowns</h3> 
+        <button id="dropdown-1" style="width:400px"></button>
+      </div>
+      
+      <div class="row">
+        <h3>Combo/Autocomplete</h3>
+        <input id="combo-1" style="width:400px">
+        <h3>Combo/Autocomplete - ajax version</h3>
+        <input id="combo-2" style="width:400px">
+      </div>
+    </div>
+    
+    <div style="clear:both"></div>
+    
+    <div id="grid">
+      <h2>4. Grid</h2>
+      <div id="grid-container" style="border: solid 1px #ddd; height: 400px"></div>
+    </div>
+  </div>
+
+  <script src="/static/libs/jquery-1.9.1.js"></script>
+  <script src="/static/libs/underscore-1.4.4.js"></script>
+  <script src="/static/libs/backbone-1.0.0.js"></script>
+  <script src="/static/data/countries.js"></script>
+
+  <script src="/static/src/js/core.js"></script>
+  <script src="/static/src/js/button.js"></script>
+  <script src="/static/src/js/input.js"></script>
+  <script src="/static/src/js/panel.js"></script>
+  <script src="/static/src/js/list.js"></script>
+  <script src="/static/src/js/datepicker.js"></script>
+  <script src="/static/src/js/grid.js"></script>
+
+  <script>
+    var colors = [
+    	{
+    		label: "Red",
+    		value: "#f00"
+    	},
+    	{
+    		label: "Green",
+    		value: "#0f0"
+    	},
+    	{
+    		label: "Blue",
+    		value: "#00f"
+    	},
+    	{
+    		label: "Cyan",
+    		value: "#0ff"
+    	},
+    	{
+    		label: "Magenta",
+    		value: "#f0f"
+    	},
+    	{
+    		label: "Yellow",
+    		value: "#ff0"
+    	},
+    	{
+    		label: "Black",
+    		value: "#000"
+    	},
+      {
+        label: "Red and Yellow",
+        value: "MK"
+      },
+      {
+        label: "Pink",
+        value: "#ff9"
+      },
+      {
+        label: "Orange",
+        value: "#fc3"
+      },
+      {
+        label: "Orange",
+        value: "#fc3"
+      },
+      {
+        label: "Peach",
+        value: "#f94"
+      },
+      {
+        label: "Brown",
+        value: "#651"
+      },
+      {
+        label: "Purple",
+        value: "#f0f"
+      },
+    ];
+  
+    var button1 = $('#unstyled-button').amp('button');
+    var button2 = $('#styled-button').amp('button', { disabled: true });
+    
+    var checkbox1 = $('#checkbox-1').amp('checkbox');
+    var checkbox2 = $('#checkbox-2').amp('checkbox');
+    var checkbox3 = $('#checkbox-3').amp('checkbox');
+
+    var radio1 = $('#radio-1').amp('radio', { active: true });
+    var radio2 = $('#radio-2').amp('radio');
+    var radio3 = $('#radio-3').amp('radio');
+    
+    var text = $('#input-text').amp('text', { format: /^[A-Za-z]+$/ });
+    var number = $('#input-number').amp('number', { format: 2, value: 1255.13, realtime: false, min: 100 });
+    var date = $('#input-date').amp('date', { format: "ISO", value: new Date(2013, 9, 3), validators: function(val){ if(val >= new Date){ return "OMGWTFBBQ"; } } });
+    
+    
+    // Abstract list with no element
+    var listData = [
+      "StringItem",
+      { value: "NoLabelItem" },
+      { value: "ItemWithALabel", label: "Item with a label" },
+      { value: "DuplicateItem", label: "DuplicateItem" },
+      "DuplicateItem",
+      "StringDupe",
+      { value: "StringDupe" },
+      undefined,
+      { v: "InvalidItem" }
+    ]
+    var list = Amp(null, 'abstractList', { items: listData, value: [ "StringItem", 1 ] });
+
+    var plist  = $('#list-1').amp('list', { items: COUNTRIES, value: "MK" });
+    var select = $('#dropdown-1').amp('select', { items: COUNTRIES, value: "MK" });
+    var combo  = $('#combo-1').amp('combo', { items: COUNTRIES, value: "MK", nullable: false });
+    var ajax   = $('#combo-2').amp('combo', { ajax: { url: "/ajax" }, value: "MK", nullable: false });
+    
+    var datepicker = $('#input-datepicker').amp('datepicker', { value: "2013-07-15", showMonth: new Date(2001, 1, 1), dateFilter: function(date){
+      return +date > +new Date(2001, 0, 1);
+    }});
+    
+    combo.on('change', function(args){
+      console.log("changed from", args.previous, "to", args.value);
+    });
+
+    ajax.on('change', function(args){
+      console.log("changed from", args.previous, "to", args.value);
+    });
+    
+    datepicker.on('change', function(args){
+      console.log("changed from", args.previous, "to", args.value);
+    });
+
+    var config = {
+      loader: 'getData',    // The method used to fetch/reset the collection
+
+      pagination: {
+        pageSize: 20,
+        dataSize: 60,
+        links:    7,
+      },
+
+      sorting: {
+        column:    'name',
+        direction: 'asc',
+      },
+      
+      columns: [
+        {
+          // Header properties
+          hattrs:   function(){
+            return { style: { width: '150px' } }
+          },
+          sortable: true,
+          title:    "Name",
+          name:     "name",
+          type:     "text",          
+          cattrs: function(model){
+            return {  }
+          },
+          actions:  function(model){ 
+            return [ 'edit' ];
+          },
+          content:  function(model){
+            
+          }
+        },
+        {
+          title:    "Cost",    
+          name:     "cost",    
+          type:     "number",    
+          format:   4,    
+          actions:  function(){ 
+            return [ 'edit' ];
+          },
+          sortable: function(){},   
+          content:  function(){}    
+        },
+        {
+          title:    "Date",
+          name:     "date",
+          type:     "date",
+          format:   "ISO",
+          actions:  function(){
+            return [ 'edit' ];
+          },
+          sortable: function(){},
+          content:  function(){}
+        },
+        {
+          title:    "Color",
+          name:     "color",
+          type:     "enum",
+          itemcache: colors,
+          items:    function(model, callback){
+            callback(colors);
+          },
+          actions:  function(){
+            return[ 'edit' ];
+          },
+          sortable: function(){}, 
+          content:  function(){} 
+        },
+        { 
+          title: "Country", 
+          name: "info1", 
+          type: "enum",
+          items: function(model, callback){
+            if(!callback) return [];
+
+            $.ajax('/ajax', {
+              success: callback,
+              error: function(){
+                alert("Error");
+              }
+            });
+          },
+          editable: true
+        },
+        { title: "Info 2", name: "info2", type: "text" },
+        { title: "Info 3", name: "info3", type: "text" },
+        { title: "Info 4", name: "info4", type: "text" },
+        { title: "Info 5", name: "info5", type: "text" },
+      ]
+    };
+    
+    var Item = Backbone.Model.extend({
+      initialize: function(){
+        this.attributes.date = Date.parse(this.get("date"), "ISO");
+      }
+    });
+    
+    var Items = Backbone.Collection.extend({ 
+      model: Item,
+      initialize: function(){
+        var grid = $('#grid-container').amp('grid', { data: this, config: config });
+
+        this.on('reset', function(){
+          grid.render();
+        });
+        
+        this.getData({ p: 1, s: 20 });
+      },
+      getData: function(params, grid){
+        var self = this;
+
+        $.ajax("/grid", {
+          data: params,
+          dataType: 'json',
+          success: function(items){
+            self.reset(items);
+          }
+        });
+      }
+    });
+    
+    new Items();
+
+    
+  </script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- UNIT TESTS -->
+  <link rel="stylesheet" href="/static/libs/qunit-1.12.0.css" type="text/css" media="screen" charset="utf-8">
+  <script src="/static/libs/qunit-1.12.0.js"></script>
+  <script>
+
+    function test(){
+      var color = 'color: #00aaff';
+
+      console.log("%cTesting callback on value set -->", color);
+      checkbox1.on('change', function(options){
+        options.callback && options.callback();
+      });
+      checkbox1.val(1, false, function(){
+        console.log("%cTest successful", color);
+      });
+      console.log("%cTesting value set -->", color);
+      checkbox1.val(0, false, function(){
+        console.log("%cTest successful", color);
+      });
+      console.log("%cTesting value get: value is " + checkbox1.val(), color);
+      
+      button1.on('click', function(){ console.log("Button1 clicked"); });
+      button2.on('click', function(){ console.log("Button2 clicked"); });
+      
+      checkbox1.on('click', function(){ console.log("checkbox1 clicked"); });
+      checkbox2.on('click', function(){ console.log("checkbox2 clicked"); });
+      checkbox3.on('click', function(){ console.log("checkbox3 clicked"); });
+      
+      checkbox1.on('change', function(options){ console.log("checkbox1 changed from", options.previous ,"to", options.value); });
+      checkbox2.on('change', function(options){ console.log("checkbox2 changed from", options.previous ,"to", options.value); });
+      checkbox3.on('change', function(options){ console.log("checkbox3 changed from", options.previous ,"to", options.value); });
+      
+      radio1.on('click', function(){ console.log("radio1 clicked"); });
+      radio2.on('click', function(){ console.log("radio2 clicked"); });
+      radio3.on('click', function(){ console.log("radio3 clicked"); });
+      
+      radio1.on('change', function(options){ console.log("radio1 changed from", options.previous ,"to", options.value); });
+      radio2.on('change', function(options){ console.log("radio2 changed from", options.previous ,"to", options.value); });
+      radio3.on('change', function(options){ console.log("radio3 changed from", options.previous ,"to", options.value); });
+      
+      text.on('type', function(ev){
+        console.log("%cText#type -->", "color: #ffaa00");
+        console.log("%cPrevious: " + ev.previous, color);
+        console.log("%cNew: " + ev.value, color);
+        console.log("%cValue: " + this.val(), color);
+      });
+
+      text.on('change', function(ev){
+        console.log("%cText#change -->", "color: #ffaa00");
+        console.log("%cPrevious: " + ev.previous, color);
+        console.log("%cNew: " + ev.value, color);
+        console.log("%cValue: " + this.val(), color);
+      });
+
+
+      number.on('type', function(ev){
+        console.log("%cNumber#type -->", "color: #ffaa00");
+        console.log("%cPrevious: " + ev.previous, color);
+        console.log("%cNew: " + ev.value, color);
+        console.log("%cValue: " + this.val(), color);
+      });
+
+      number.on('change', function(ev){
+        console.log("%cNumber#change -->", "color: #ffaa00");
+        console.log("%cPrevious: " + ev.previous, color);
+        console.log("%cNew: " + ev.value, color);
+        console.log("%cValue: " + this.val(), color);
+      });
+      
+      
+      date.on('type', function(ev){
+        console.log("%cDate#type -->", "color: #ffaa00");
+        console.log("%cPrevious: " + ev.previous, color);
+        console.log("%cNew: " + ev.value, color);
+        console.log("%cValue: " + this.val(), color);
+      });
+
+      date.on('change', function(ev){
+        console.log("%cDate#change -->", "color: #ffaa00");
+        console.log("%cPrevious: " + ev.previous, color);
+        console.log("%cNew: " + ev.value, color);
+        console.log("%cValue: " + this.val(), color);
+      });
+      
+      date.on('validationError', function(messages, field){
+        console.log("%cDate#validationError -->", "color: #ffaa00");
+        console.log(messages);
+        console.log(field.element.attr('id'));
+      })
+    }
+    
+
+  </script>
+</body>
+</html>

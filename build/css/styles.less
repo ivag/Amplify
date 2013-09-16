@@ -1,0 +1,679 @@
+/**
+ * Amp core styles
+**/
+
+// Helper classes
+.clearfix() { 
+  *zoom: 1; 
+
+  &:before, &:after { 
+    display: table; 
+    content: ""; 
+  }
+
+  &:after { 
+    clear: both; 
+  }
+}
+
+.box-shadow(@shadow){
+  -webkit-box-shadow: @shadow;
+     -moz-box-shadow: @shadow;
+          box-shadow: @shadow;
+}
+
+.opacity(@opacity: 100) { 
+  opacity: @opacity / 100; 
+  filter: e(%("alpha(opacity=%d)", @opacity));
+}
+
+.amp {
+  font-size: inherit;
+
+  &:focus {
+    outline:      solid 1px #B3D4FD;
+    border-color: #B3D4FD;
+  }
+  
+  &::-moz-focus-inner {
+    border: 0;
+  }
+}
+
+// Multi-purpose backdrop.
+// Used by modal windows and alerts.
+div.amp-backdrop {
+  position: fixed;
+  z-index:  1;
+  display:  none;
+  opacity:  .75;
+  top:      0;
+  left:     0;
+  right:    0;
+  bottom:   0;
+  background: #fff;
+  background: -webkit-gradient(radial, center center, 0, center center, 460, from(#fff), to(#ccc));
+  background: -webkit-radial-gradient(circle, #fff, #ccc);
+  background: -moz-radial-gradient(circle, #fff, #ccc);
+  background: -ms-radial-gradient(circle, #fff, #ccc);
+}
+/**
+ * Amp button styles
+**/
+
+.amp.btn {
+  display:          inline-block;
+  position:         relative;  
+  padding:          4px 10px 4px;
+  margin:           0;
+  text-align:       center;
+  border:           solid 1px #ccc;
+  cursor:           pointer;
+  background-color: #f5f5f5;
+  text-decoration:  none;
+  
+  &.radio, &.checkbox {
+    padding-left: 22px;
+    background-image: url(../img/dot-dark.png);
+    background-repeat: no-repeat;
+    background-position: 4px center;
+  }
+  
+  &.active {
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+    
+    &:focus {
+      background-color: #f0f0ff !important;
+    }
+    
+    &.radio, &.checkbox {
+      background-image: url(../img/tick-dark.png);
+    }
+  }
+
+  &:focus {
+    outline: none;
+    background-color: #f0f0ff;
+  }
+
+  &[disabled] {
+    cursor:       default;
+    background:   #eee;
+    color:        #aaa;
+    border-color: #eee;
+  }
+}
+
+.btn-group {
+  .clearfix();
+  
+  position: relative;
+  
+  .btn {
+    position:    relative;
+    float:       left;
+    margin-left: -1px;
+  }
+    
+  .btn:hover, .btn:focus, .btn:active, .btn.active { 
+    z-index: 2; 
+  }
+}
+
+.btn-group + .btn-group {
+  margin-left: 5px;
+}
+/**
+ * Amp input styles
+**/
+
+input.amp, textarea.amp {
+          box-sizing:   border-box;
+     -moz-box-sizing:   border-box;
+  -webkit-box-sizing:   border-box;
+
+  display:        inline-block;
+  padding:        4px;
+  margin:         0;
+  border:         solid 1px #ccc;
+  background:     #fff;
+  color:          #333;
+  outline-offset: 0px;
+  
+  &[disabled] {
+    cursor:       default;
+    background:   #eee;
+    color:        #aaa;
+    border-color: #eee;
+  }
+  
+  &.number { 
+    text-align: right; 
+  }
+  
+  &.date {
+    text-align: center;
+  }
+}
+.amp-panel {
+  position: relative;
+}
+
+// Some panels are used as components of composite controls
+.amp-panel.component {
+  z-index:            5;
+  position:           absolute;
+  visibility:         hidden;
+  background:         white;
+  -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+     -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+       -o-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+          box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+
+  .amp-content {
+     display:  inline-block; /* Required so that the content div expands when to its content's dimensions */
+  }
+  
+  &.shown {
+    visibility: visible;
+
+    .amp-content {
+      display: block;        /* Once the panel is shown, we can switch the content to display block as the dimensions have been calculated */
+    }
+  }
+}
+
+.amp-wrapper {
+  position: absolute;
+  overflow: hidden;
+  top:      0;
+  left:     0;
+  bottom:   0;
+  right:    0;
+}
+
+.amp-content {
+                          /* DO NOT add height or width */
+  overflow: auto;         /* Required so that the content div stretches around childen's margins */
+  position: relative;     /* Required so we can use the css top property instead of scrollTop for performance */
+}
+
+.amp-scrollbar-v {
+  position: absolute;
+  z-index:  3;
+  width:    10px;
+  top:      0;
+  bottom:   0;
+  right:    0;
+  
+  opacity:    0;
+  
+  transition: opacity 0.2s linear;
+  background: #f5f5f5;
+  cursor:     pointer;
+}
+
+.amp-panel:hover .amp-scrollbar-v, .amp-panel.scrolling .amp-scrollbar-v {
+  opacity: 0.95;
+}
+
+.amp-thumb-v {
+  position:   absolute;
+  width:      10px;
+
+  background: #ddd;
+  cursor:     pointer;
+}
+
+.amp-scrollbar-h {
+  width: 0;
+  height: 0;
+}
+
+.amp-unselectable {
+  user-select:          none;
+  -moz-user-select:     none;
+  -khtml-user-select:   none;
+  -webkit-user-select:  none;
+}
+
+input.amp.date.picker {
+  padding-right: 20px;
+  background-image: url(../img/datepicker.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+div.amp-datepicker {
+  -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+     -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+       -o-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+          box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  
+  width:      320px;
+  height:     216px;
+  position:   absolute;
+  z-index:    5;
+  border:     solid 1px #ddd;
+  background: white;
+  
+  .datepicker-years {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 0;
+
+    width: 60px;
+    z-index: 3;
+    
+    .way-back {
+      background: url(../img/arrow-up.png) no-repeat center center;
+    }
+    
+    .way-ahead {
+      background: url(../img/arrow-down.png) no-repeat center center;
+    }
+  }
+
+  .datepicker-months {
+    position: absolute;
+    bottom: 0;
+    left: 60px;
+    top: 0;
+
+    width: 60px;
+    z-index: 2;
+  }
+  
+  .datepicker-months, .datepicker-years {
+    div {
+      font-size:    1em;
+      text-align:   center;
+      height:       18px;
+      line-height:  18px;
+      cursor:       pointer;
+      width:        51px;
+      
+      &.active {
+        background-color: rgba(0,100,205, .75);
+        color:            #fff;
+      }
+      
+      &.active:after {
+        position: absolute;
+        content: "";
+      	width: 0; 
+      	height: 0;
+        right: 0px;
+      	border-top: 9px solid transparent;
+      	border-bottom: 9px solid transparent;
+      	border-left: 9px solid rgba(0,100,205, .75);
+      }
+    }
+  }
+  
+  .datepicker-calendar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 120px;
+    
+    table {
+      height:      75%;
+      width:       75%;
+      margin:      20px auto;
+
+      td, th {
+        text-align: center;
+        padding: 1px 4px;
+      }
+      td {
+        cursor: pointer;
+        border-left: solid 1px #ddd;
+        &:first-child {
+          border-left: none;
+        }
+        vertical-align: baseline;
+      }
+      td.disabled {
+        cursor: default;
+        color: #ccc;
+      }
+      td.empty {
+        cursor: default;
+      }
+      td.active {
+        color: white;
+        background-color: rgba(0,100,205,.75);
+      }
+    }
+  }
+}.amp.btn.select { 
+  padding: 4px;
+  background-image: url(../img/arrow-up-down.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+    
+  // This looks the same as the "active" class on the buttons
+  // except that it's contorlled by the Select widget instad of the button itself
+  &.open {
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+  }
+  
+  div {
+    margin:           0 22px 0 2px;
+    overflow:         hidden;
+    text-overflow:    ellipsis;
+    white-space:      nowrap;
+    text-align:       left;
+    background-color: transparent;
+  }
+}
+
+
+.amp.input.combo {
+  background-image:     url('../img/arrow-up-down.png');
+  background-position:  right center;
+  background-repeat:    no-repeat;    
+  padding-right:        20px;
+
+  &.loading {
+    background-image:   url('../img/ajax-load.gif');
+  }
+}
+
+
+.amp.panel-list {
+  list-style: none;
+  padding:    0;
+  margin:     0;
+  
+  li {
+    padding:       4px 20px;
+    margin:        0;
+    border-bottom: solid 1px #eee;
+    white-space:   nowrap;
+    line-height:   1;
+    cursor:        pointer;
+
+    background-position:  2px center;
+    background-repeat:    no-repeat;
+    
+    overflow:      hidden;
+    text-overflow: ellipsis;
+    
+    &.focused {
+      background-color: #0064cd;
+      color:            #fff;
+
+      &.active {
+        background-color: #0064cd;
+        background-image: url('../img/tick-light.png');
+      }
+    }
+
+    &.active {
+      background-color: #fff;
+      background-image: url('../img/tick-dark.png');
+    }
+  }
+  
+  li:last-child {
+    border-bottom: none;
+  }  
+}.grid-container {
+  position: relative;
+  
+  .amp-panel {
+    position: absolute;
+    top:      0;
+    left:     0;
+    right:    0;
+    bottom:   0;
+  }
+}
+
+table.amp-grid {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border: none;
+  
+  th.sortable {
+    padding-right: 20px;
+  }
+  
+  th, td {
+    border: solid 1px #ddd;
+    padding: 5px;
+  }
+  
+  tr:first-child {
+    th, td {
+      border-top: none;
+    }
+  }
+  
+  tr:last-child {
+    th, td {
+      border-bottom: none;
+    }
+  }
+
+  th, td {
+    &:first-child {
+      border-left: none
+    }
+    &:last-child {
+      border-right: none;
+    }
+  }
+  
+  td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  &.footer {
+    margin-bottom: 50px;
+  }
+}
+
+div.amp-header-grid {
+  position:   absolute;
+  overflow-x: hidden;
+  width:      100%;
+  z-index:    4;
+  
+  box-shadow: 0px 4px 5px -3px rgba(64, 64, 64, 0.5);
+  background: #fff;  
+  
+  table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: none;
+    
+    th {
+      padding: 5px;
+      border-left: solid 1px #ddd;
+      border-right: solid 1px #ddd;
+
+      &:first-child {
+        border-left: none
+      }
+      &:last-child {
+        border-right: none;
+      }
+      
+      &.sortable { 
+        cursor: pointer; 
+        background-repeat: no-repeat;
+        background-position: right center;
+        padding-right: 20px;
+        background-image: url('../img/sort-dash.png');
+      
+        &.asc {
+          background-image: url('../img/sort-asc.png');
+        }
+        &.desc {
+          background-image: url('../img/sort-desc.png');
+        }
+      }
+    }
+    
+  }
+}
+
+div.amp-footer-grid {
+  position:   absolute;
+  bottom:     0;
+  overflow-x: hidden;
+  width:      100%;
+  z-index:    4;
+  
+  box-shadow: 0px -4px 5px -3px rgba(64, 64, 64, 0.5);
+  background: #fff;
+  padding-bottom: 10px;
+
+  table {
+    width:  100%;
+    border: none;
+    border-collapse: collapse;
+    border-spacing: 0;
+    
+    td {
+      height: 34px;
+      text-align: center;
+      vertical-align: middle;
+      
+      &.paginator {
+        text-align: center;
+      
+        &::selection { background: transparent; }
+        &::-moz-selection { background: transparent; }
+          
+        a {
+          display: inline-block;
+          padding: 3px 5px;
+          border:  solid 1px #ddd;
+          margin:  0 3px;
+          cursor:  pointer;
+          font-size: 100%;
+        
+          &::selection { background: transparent; }
+          &::-moz-selection { background: transparent; }
+        
+          &.active {
+            color: white;
+            background:   #B3D4FD;
+            border-color: #B3D4FD;
+          }
+        }
+      
+        input {
+          display: inline-block;
+          padding: 3px 5px;
+          border:  solid 1px #ddd;
+          margin:  0 3px;
+          text-align: right;
+          max-width: 20px;
+          font-size: 100%;
+        
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+      
+    }
+    
+  }
+}
+
+div.amp-grid-actions {
+  opacity:    0;
+  position:   absolute;
+  z-index:    2;
+  background: rgba(240,245,255,0.9);
+  color:      black;
+  padding:    0 10px;
+    
+          box-sizing: border-box;
+      -ms-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  -webkit-transform: scale(0);
+     -moz-transform: scale(0);
+          transform: scale(0);
+}
+
+.amp-grid-field {
+  position: absolute;
+  z-index: 5;
+  opacity: 0;
+  visibility: hidden;
+  outline: none;
+  border: solid 1px #B3D4FD;
+}
+
+.amp-grid-field.shown {
+  opacity:   1;
+  visibility: visible;
+  outline: none;
+  border: solid 1px #B3D4FD;
+  
+  -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+     -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+       -o-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+          box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  
+  -webkit-transition: opacity .2s ease;
+     -moz-transition: opacity .2s ease;
+          transition: opacity .2s ease;
+}
+
+.action-icon {
+  position: relative;
+  display: block;
+  height: 16px;
+  padding-left: 20px;
+  font-size: 14px;
+  color: inherit;
+  text-decoration: none;
+
+  top: 50%;
+  margin-top: -8px;
+
+  &.edit {
+    background: url(../img/pencil.png) no-repeat center left;
+  }
+}
+
+.amp-grid-columnblind {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  background: rgba(240,245,255,0.35);
+  pointer-events: none;
+}
+
+.amp-grid-rowblind {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  background: rgba(240,245,255,0.35);
+  pointer-events: none;
+}
+
+.amp-grid-columnblind, .amp-grid-rowblind {
+  -webkit-transition: top .4s ease, left .4s ease;
+     -moz-transition: top .4s ease, left .4s ease;
+      -ms-transition: top .4s ease, left .4s ease;
+          transition: top .4s ease, left .4s ease;
+}
